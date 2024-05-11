@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmyapp=self.webpackChunkmyapp||[]).push([[801],{801:(e,p,a)=>{e.exports=a.p+"static/media/\u0420\u0416\u0414.8ae579cc88b513e9225a.svg"}}]);
