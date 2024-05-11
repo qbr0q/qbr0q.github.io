@@ -6,7 +6,8 @@ const Vacancies = (filtredVacancyList) => {
 
   const filter = localStorage.getItem('vacancyFilter')
   const vacancyList = require('../../../appContans').vacancyList
-  let sortedVacancyList = filter === 'Все вакансии' ? shuffle(vacancyList) : filtredVacancyList['vacancyList']
+  let sortedVacancyList = filter ? filter === 'Все вакансии' ? shuffle(vacancyList) : filtredVacancyList['vacancyList']
+  : shuffle(vacancyList)
 
   function shuffle(array) {
     let currentIndex = array.length;
