@@ -1,0 +1,23 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color .3s ease;
+}
+
+/* логотип */
+
+.logo_img{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 4px;
+}
+
+.logo_img img{
+    height: 30px;
+}
