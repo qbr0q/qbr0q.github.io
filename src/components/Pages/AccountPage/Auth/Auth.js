@@ -17,7 +17,8 @@ const Auth = () => {
       alert('Вы были авторизованы')
       setLogin('')
       setPassword('')
-      window.location.href = '/account'
+      const baseUrl = window.location.origin;
+      window.location.href = `${baseUrl}/account`;
     } else {
       alert('Пожалуйста, заполните все поля формы корректно')
     }
