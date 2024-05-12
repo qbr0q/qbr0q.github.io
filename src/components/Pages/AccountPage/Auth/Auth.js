@@ -1,4 +1,5 @@
 import {React, useState} from 'react';
+import { Link } from 'react-router-dom';
 import AuthIcons from './AuthIcons';
 import '../../../../css/AccountPage/auth.css'
 import hideEye from '../../../../media/hideEye.svg'
@@ -43,7 +44,7 @@ const Auth = () => {
         <div className='btnsAuth'>
           <button className='authBtn'>Войти</button>
           <button className='regBtn'>Зарегистрироваться</button>
-          <button className='restoreAccessBtn'>Восстановить доступ</button>
+          <Link to={'/account'}><button className='restoreAccessBtn'>Восстановить доступ</button></Link>
         </div>
     </form>
   );
