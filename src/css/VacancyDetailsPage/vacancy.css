@@ -97,3 +97,15 @@
 .companyLogo{
     height: 50px;
 }
+
+@media (max-width: 768px){
+    .vacancyInfo{
+        margin: 160px 20% 15px;
+        width: 100%;
+    }
+
+    .companyInfo{
+        margin: 15px 20%;
+        width: 100%;
+    }
+}

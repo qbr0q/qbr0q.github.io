@@ -41,3 +41,27 @@
     border-bottom: 2px solid var(--green-color);
     color: var(--green-color)
 }
+
+@media (max-width: 768px) {
+    .switcher {
+      flex-direction: column; 
+      margin-top: 0; 
+      width: 150%; 
+      margin-left: 0; 
+    }
+  
+    .jobCategories {
+      flex-direction: column; 
+    }
+  
+    .jobCategories li,
+    #allVacancy {
+      width: 100%; 
+      border-radius: 0;
+      text-align: center; 
+    }
+  
+    .activeFilter {
+      border-bottom: 2px solid var(--green-color);
+    }
+  }

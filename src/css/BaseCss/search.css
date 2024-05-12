@@ -102,3 +102,28 @@
     color: white;
     transition: .2s;
 }
+
+@media (max-width: 768px) {
+    .search {
+      margin-left: -135px;
+      margin-right: -165px;
+      margin-top: 17%;
+    }
+  
+    .searchJobInput {
+      width: 213px;
+    }
+  
+    .productBtn {
+      width: 133px;
+      color: black
+    }
+  
+    .searchRegionInput {
+      width: 123px;
+    }
+  
+    .searchBtn {
+      width: 150%;
+    }
+  }

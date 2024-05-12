@@ -38,3 +38,31 @@
 .post_resume button:hover, .post_vacancy button:hover{
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .underHeader {
+      flex-direction: column; 
+      height: auto; 
+      width: 160%;
+      margin-top: 125px;
+    }
+  
+    .post_resume,
+    .post_vacancy {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  
+    .post_resume h2,
+    .post_vacancy h2 {
+      padding: 10px; 
+    }
+  
+    .post_resume h5,
+    .post_vacancy h5 {
+      font-size: 14px; 
+    }
+    .post_resume button, .post_vacancy button{
+      color: black
+  }
+  }

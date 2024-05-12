@@ -31,7 +31,6 @@ footer{
     width: 70%;
     font-size: 14px;
     line-height: 15px;
-    /* max-height: 100px; */
     min-height: 150px;
 }
 
@@ -43,3 +42,29 @@ footer{
 .tableLinks td:hover{
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 0;
+      width: 160%;
+    }
+  
+    .qrcode {
+      margin-bottom: 20px;
+    }
+  
+    .socialMedia {
+      width: 100%;
+      margin-bottom: 20px;
+      justify-content: center;
+      gap: 20px
+    }
+  
+    .tableLinks {
+      width: 100%;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }

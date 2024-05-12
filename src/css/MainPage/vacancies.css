@@ -8,14 +8,16 @@
     border-radius: 10px;
     padding-left: 15px;
     background-color: white;
+    flex: 0 0 calc(33.33% - 20px); 
+    box-sizing: border-box;
 }
 
 .vacancies{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
-    flex-wrap: wrap;
-    width: 92.15%;
     margin-left: 5%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .time{
@@ -93,21 +95,40 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 900px){
-    .vacancies{
-        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
-        width: 95%;
+@media (max-width: 768px) {
+    .vacancyContainer {
+      flex: 0 0 100%;
+      height: auto;
+    }
 
+    .vacancies{
+        justify-content: center;
+        width: 150%;
     }
-    .vacancyContainer{
-        /* margin-top: 10px; */
-        width: 250px;
-        /* height: 200px;
-        margin-bottom: 20px; 
-        display: flex;
-        flex-direction: column;
-        border-radius: 10px;
-        padding-left: 15px;
-        background-color: white; */
+  
+    .work {
+      font-size: 18px; /* Уменьшить размер шрифта для заголовка */
     }
-}
+  
+    .salary,
+    .company,
+    .city,
+    .time {
+      font-size: 14px; /* Уменьшить размер шрифта для остальных элементов */
+    }
+  
+    .respondBtn,
+    .callBtn {
+      width: 95%; /* Растянуть кнопки на всю ширину контейнера на мобильных устройствах */
+      margin-right: 0; /* Удалить отступ между кнопками */
+      margin-bottom: 10px; /* Добавить отступ под кнопками */
+    }
+
+    .callBtn{
+        margin-bottom: 15px;
+    }
+  
+    .btns {
+      flex-direction: column; /* Изменить направление flex-контейнера на column для мобильных устройств */
+    }
+  }

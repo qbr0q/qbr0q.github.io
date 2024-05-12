@@ -26,48 +26,12 @@ const Header = () => {
 
   return (
     <header style={{ background: headerColor}}>
-          <Menu/>
-          <LogoIcon/>
-          <Search/>
-          <HelpAuthBtns/>
+        <Menu/>
+        <LogoIcon/>
+        <Search/>
+        <HelpAuthBtns/>
     </header>
   );
 };
 
 export default Header;
-
-// import React, { useEffect, useState } from 'react';
-// import '../../css/header.css'
-// import Menu from './Menu/Menu';
-// import LogoIcon from './LogoIcon';
-// import Search from './Search/Search';
-// import HelpAuthBtns from './HelpAuthBtns';
-
-// const Header = () => {
-//   const [headerColor, setHeaderColor] = useState('red')
-//   useEffect(() => {
-//       const handleScroll = () => {
-//         if (window.scrollY > 100) {
-//           setHeaderColor('blue');
-//         } else {
-//           setHeaderColor('red')}
-//       };
-  
-//       window.addEventListener('scroll', handleScroll);
-  
-//       return () => {
-//         window.removeEventListener('scroll', handleScroll);
-//       };
-//     }, [headerColor]);
-
-//   return (
-//     <header style={{ background: headerColor}}>
-//           <Menu/>
-//           <LogoIcon/>
-//           <Search/>
-//           <HelpAuthBtns/>
-//     </header>
-//   );
-// };
-
-// export default Header;

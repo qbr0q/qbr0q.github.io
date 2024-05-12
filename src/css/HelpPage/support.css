@@ -1,4 +1,4 @@
-.contacts, .FAQ{
+.contacts{
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -47,6 +47,14 @@
     resize: none;
     width: 95.5%;
     height: 100px;
+    margin-bottom: 10px;
+}
+
+.question .counter{
+    display: flex;
+    justify-content: end;
+    margin-right: 21px;
+    margin-bottom: 20px;
 }
 
 .sumbitBtn{
@@ -63,4 +71,11 @@
 .sumbitBtn:hover{
     background-color: rgb(22, 192, 152);
     cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .contacts{
+        margin-top: 150px;
+        width: 100%;
+    }
 }
