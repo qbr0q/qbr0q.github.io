@@ -18,15 +18,15 @@ const Auth = () => {
       alert('Вы были авторизованы')
       setLogin('')
       setPassword('')
-      const baseUrl = window.location.origin;
-      window.location.href = `${baseUrl}/account`;
+      // const baseUrl = window.location.origin;
+      // window.location.href = `${baseUrl}/account`;
     } else {
       alert('Пожалуйста, заполните все поля формы корректно')
     }
   }
 
   return (
-    <form className='formAuth' onSubmit={handleSubmit}>
+    <form className='formAuth'>
         <h1 className='h1Auth'>Вход</h1>
         <AuthIcons/>
         <div className='inputAuth'>
@@ -42,9 +42,11 @@ const Auth = () => {
           </div>
         </div>
         <div className='btnsAuth'>
-          <button className='authBtn'>Войти</button>
-          <button className='regBtn'>Зарегистрироваться</button>
-          <Link to={'/account'}><button className='restoreAccessBtn'>Восстановить доступ</button></Link>
+          <button className='authBtn'
+          type='submit' onSubmit={handleSubmit}>Войти</button>
+          <button className='regBtn' type='button'>Зарегистрироваться</button>
+          <Link to={'/account'}><button className='restoreAccessBtn'
+          type='button'>Восстановить доступ</button></Link>
         </div>
     </form>
   );
