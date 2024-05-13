@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import AuthIcons from './AuthIcons';
 import '../../../../css/AccountPage/auth.css'
 import hideEye from '../../../../media/hideEye.svg'
@@ -10,6 +10,8 @@ const Auth = () => {
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
 
+  const navigate = useNavigate()
+
   document.title = 'Войти в аккаунт'
 
   const handleSubmit = (event) => {
@@ -18,15 +20,14 @@ const Auth = () => {
       alert('Вы были авторизованы')
       setLogin('')
       setPassword('')
-      // const baseUrl = window.location.origin;
-      // window.location.href = `${baseUrl}/account`;
+      navigate('/account')
     } else {
       alert('Пожалуйста, заполните все поля формы корректно')
     }
   }
 
   return (
-    <form className='formAuth'>
+    <form className='formAuth' onSubmit={handleSubmit}>
         <h1 className='h1Auth'>Вход</h1>
         <AuthIcons/>
         <div className='inputAuth'>
@@ -43,10 +44,10 @@ const Auth = () => {
         </div>
         <div className='btnsAuth'>
           <button className='authBtn'
-          type='submit' onSubmit={handleSubmit}>Войти</button>
+          type='submit'>Войти</button>
           <button className='regBtn' type='button'>Зарегистрироваться</button>
-          <Link to={'/account'}><button className='restoreAccessBtn'
-          type='button'>Восстановить доступ</button></Link>
+          <button className='restoreAccessBtn'
+          type='button'>Восстановить доступ</button>
         </div>
     </form>
   );
