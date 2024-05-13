@@ -27,7 +27,7 @@ const Auth = () => {
   }
 
   return (
-    <form className='formAuth' onSubmit={handleSubmit}>
+    <form className='formAuth'>
         <h1 className='h1Auth'>Вход</h1>
         <AuthIcons/>
         <div className='inputAuth'>
@@ -44,7 +44,7 @@ const Auth = () => {
         </div>
         <div className='btnsAuth'>
           <button className='authBtn'
-          type='submit'>Войти</button>
+          type='button' onClick={handleSubmit}>Войти</button>
           <button className='regBtn' type='button'>Зарегистрироваться</button>
           <button className='restoreAccessBtn'
           type='button'>Восстановить доступ</button>
