@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AuthIcons from './AuthIcons';
 import '../../../../css/AccountPage/auth.css'
 import hideEye from '../../../../media/hideEye.svg'
@@ -10,8 +10,6 @@ const Auth = () => {
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
 
-  const navigate = useNavigate()
-
   document.title = 'Войти в аккаунт'
 
   const handleSubmit = (event) => {
@@ -20,14 +18,14 @@ const Auth = () => {
       alert('Вы были авторизованы')
       setLogin('')
       setPassword('')
-      navigate('/account')
+      document.getElementById('GHPagesRouter').click()
     } else {
       alert('Пожалуйста, заполните все поля формы корректно')
     }
   }
 
   return (
-    <form className='formAuth'>
+    <form className='formAuth' onSubmit={handleSubmit}>
         <h1 className='h1Auth'>Вход</h1>
         <AuthIcons/>
         <div className='inputAuth'>
@@ -44,11 +42,13 @@ const Auth = () => {
         </div>
         <div className='btnsAuth'>
           <button className='authBtn'
-          type='button' onClick={handleSubmit}>Войти</button>
+          type='submit' onSubmit={handleSubmit}>Войти</button>
           <button className='regBtn' type='button'>Зарегистрироваться</button>
           <button className='restoreAccessBtn'
           type='button'>Восстановить доступ</button>
         </div>
+        <Link style={{display: 'none'}} id='GHPagesRouter'
+        to={'/account'}></Link>
     </form>
   );
 }
